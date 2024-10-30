@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix España - Ver series en línea</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/favicon.svg">
+
+
+</head>
+<body class="bg-black text-white">
+   
+        <header class="bg-transparent p-3 position-absolute w-100" style="z-index: 10; top: 0;">
+            <div class="container-fluid d-flex flex-column flex-md-row justify-content-md-around align-items-center text-center">
+                <!-- LOGO -->
+                <div class="d-flex justify-content-center align-items-center mb-3 mb-md-0">
+                    <img src="assets/img/logo.png" alt="Logo" width="160" height="100">
+                </div>
+
+                <!-- SELECT Y BUTTON -->
+                <div class="d-flex justify-content-center align-items-center flex-row caja-botones">
+                    <select name="select" class="bg-transparent text-white me-2 language p-1" id="language">
+                        <option value="Español" class="text-dark selected">Español</option>
+                        <option value="Inglés" class="text-dark">English</option>
+                    </select>
+                    <button class="btn btn-danger buttons p-1 fw-bold inicio" type="button" id="signIn">Iniciar sesión</button>
+                </div>
+            </div>
+        </header>
+ 
+        
+            <!-- banner -->
+            <div class="row position-relative banner" style="height: 95vh;">
+                <div class="position-absolute " style="top: 0; left: 0; right: 0; bottom: 0; background-image: url('assets/img/banner.jpg'); background-size: cover; background-position: center; filter: brightness(30%); z-index: 1;"></div>
+                
+                <div class="col-12 d-flex justify-content-center align-items-center flex-column text-center text-white" style="z-index: 2;">
+                    <h1 class="fs-1 title1 mb-4 ">Películas y series sin límites y mucho más</h1>
+                    <p class="fs-5 mb-4 title2">A partir de 6,99 €. Cancela cuando quieras.</p>
+                    <p class=" mb-4 title3">¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla.</p>
+                    <form class="mt-3 d-flex flex-column flex-md-row align-items-center">
+                        <input type="email" class="form-control mb-2 mb-md-0 email-input bg-transparent text-white" id="email-input" placeholder="Dirección de correo" required>
+                        <button class="btn btn-danger btn-submit" id="btn-submit">Empezar ></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- sombra -->
+            <div class="shadow" ></div>
+
+            <!-- principal -->
+            <main class="main">
+                <div class="row d-flex align-items-center justify-content-center ">
+                    <div class="col-12 col-md-auto mb-3 mb-md-0 popcornImg">
+                        <img src="assets/img/palomitas.svg" alt="Palomitas" width="85" height="85" >
+                    </div>
+                    <div class="col-12 col-md-auto mb-3 mb-md-0 box-info-anuncios">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col-12 col-md-auto mb-3 mb-md-0">
+                                <h3 class="h3-info-anuncios">Todo lo que te encanta de Netflix por solo 6,99 €.</h3>
+                                <p>Elige nuestro plan más asequible, que tiene anuncios</p>
+                            </div>
+                            <div class="col-12 col-md-auto mb-3 mb-md-0  " >
+                                <button class="btn  btn-more-info">Más información</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tendencias -->
+                <div class="box-tendencias  mt-5">
+                    <div class="row ">
+                        <h2 class="mb-4">Tendencias ahora</h2>
+                    </div>
+                    
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex align-items-center overflow-hidden" id="carouselContainer">
+                                <button class="btn bg-dark text-white me-2 flecha" id="prevBtn">&#8249;</button>
+                                <div id="carousel" class="w-100">
+                                    <div class="row flex-nowrap" id="movieRow">
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaZuMHJsmAN5thETwcKSvCbEdK_54oKxtZ2-hEQscwHNAWhAYi2TTLA5X6IKqpnFaNDE0qtYkT8IpAXvfk4c69QAWyqKjCyOdtLR_y1_VLOG_xpExDtc2pJ-lH5jg70zASgU.webp?r=979" alt="Monstruos">
+                                            <p class="numTendencia">1</p>
+                                        </div>
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABbbeoo4v5EFuaox3ZZ2DvWnUz99RPXkKWBjJOFBbJWVP3gid6LMnC2kWmKBt3KBjEb7F5oDNPjLDAkurWvxm2Cjp6OqCQIO1q48.webp?r=2e4" alt="Padre no hay más que uno 4">
+                                            <p class="numTendencia">2</p>
+                                        </div>
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdEjdTU7twPv1A_scps-GXW80s7KF9nanghPDnoMM0LJwhDgm67cN42xsnmjxyzaeqp6oZXPKMIXeLaiRtHuDn68RQTusSxOlKc.webp?r=fbe" alt="Prison Break">
+                                            <p class="numTendencia">3</p>
+                                        </div>
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABTCHNrPaqll4n2Tr4FBtXGn0NjLXPqTIJZSUNiyggdWAfMR4k9oPgSz7IewNEaY6QMfj7BKSFrvwmiz8TxBN-TWtp1eIYxrY58Ixt4cz7K3MRT-QwRBuTOmqN3b7Re5SLhu-.webp?r=b00" alt="Soy Georgina">
+                                            <p class="numTendencia">4</p>
+                                        </div>
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABQ7Y9QT63GPeupqMu4W-SsVveNkm06uSGHa7OxH5ixDfUNIwcRd5FdjzcBU_bVlX6iJG5yNsbIUiOGpmIlj5S5KXHSlVURxY7r0.webp?r=125" alt="El peor vecino del mundo">
+                                            <p class="numTendencia">5</p>
+                                        </div>
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABbXI7WQLWdvmcxL2JdX7FgaJbcxgqsikA9MzSqPnbUJpY6OuXBjcauKZjLTAoHy7jKw5qN9F2Gil2VKqXwrG3zhQoKXZwWsN5sqpArT19h24p8_u0KjpCEBeA5n6Sjb0xI9H.webp?r=467" alt="El hoyo 2">
+                                            <p class="numTendencia">6</p>
+                                        </div>
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABX1amFt0Q_399VwpjKgA0yqQh0Z5W4hkA_kR7E8jZKE4odtmDQbXY7JxALUvIzwp-Au2hdTyygXYfk_ly3eFTZ8PeT_UktuzUISw0gq3f3pvYU7wENeSUrc6dSKWqIfFH8Fe.webp?r=747" alt="Outer Banks">
+                                            <p class="numTendencia">7</p>
+                                        </div>
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABefO29Oj8VeQgvc6FPvcteOzS6BoQmn8-P6rED3epFf7gQ-hHr5VdkmMUepaWKhNUqy17OanSk25Y03jO5QkUc1RgBRlVsHWCNYKFt4oo9jKKzvMUmDeSNPntv-Zsi5BgqML.webp?r=4fa" alt="La última noche en Tremor">
+                                            <p class="numTendencia">8</p>
+                                        </div>
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABes0SKgyYa5jnYRm5uVd82vQxF9oruO_YR32gOf0K8X6gl1_6XimJ1ovPEAfOnLnix9i2OUxDWiZ43cDHe8L-i5ChDtm3QGC_qfTKHqWTwvuJ9xyWK1cv9XnmdXjkXmSU_xk.webp?r=9c4" alt="Los hombres lobo">
+                                            <p class="numTendencia">9</p>
+                                        </div>
+                                        <div class="col" style="min-width: 200px;">
+                                            <img src="https://occ-0-8187-358.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUY5eRIvBfYJ0nID9L8nQheWpIoowsZzGA2csieA7ioT10L2mdIUEJDg_KLdkuvgA3PYYGjYzEBA7Ln3b467oW1nfvb_Da6o4uQm_mwVKIR5EK2imz2fxIpxy8o9WsybF-T4.webp?r=847" alt="Emmily in Paris">
+                                            <p class="numTendencia">10</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <button class="btn  bg-dark text-white ms-2 flecha" id="nextBtn">&#8250;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Motivos -->
+                <div class="box-principal-motivos">
+                    <div class="row">
+                        <h2 class="mt-5">Más motivos para suscribirte</h2>
+                    </div>
+                    <!-- box motivos -->
+                    <div class="row d-flex justify-content-between box-general-motivos">
+                        <div class="col-12 col-sm-6 col-md-3 d-flex flex-column  box-motivos position-relative">
+                            <h3>Disfruta en tu tele</h3>
+                            <p>Smart TV, Playstation, Xbox, Chromecast, Apple TV, reproductores Blu-ray y muchos más.</p>
+                            <img src="assets/img/icon-tv.svg" alt="Tele" class="position-absolute bottom-0 end-0 m-3 img-motivos " width="72" height="72">
+                        </div>
+            
+                        <div class="col-12 col-sm-6 col-md-3 d-flex flex-column  box-motivos position-relative">
+                            <h3>Descárgate tus favoritas para verlas sin conexión</h3>
+                            <p>Guarda tus títulos favoritos fácilmente para que siempre tengas algo para ver.</p>
+                            <img src="assets/img/icon-arrow-circle.svg" alt="Flecha" class="position-absolute bottom-0 end-0 m-3 img-motivos " width="72" height="72">
+                        </div>
+            
+                        <div class="col-12 col-sm-6 col-md-3 d-flex flex-column  box-motivos position-relative">
+                            <h3>Disfruta en todas partes</h3>
+                            <p>Ve en streaming todas las películas y series de tu móvil, tableta, ordenador y televisor.</p>
+                            <img src="assets/img/icon-party.svg" alt="Fiesta" width="72" height="72" class="position-absolute bottom-0 end-0 m-3 img-motivos  ">
+                        </div>
+            
+                        <div class="col-12 col-sm-6 col-md-3 d-flex flex-column  box-motivos position-relative">
+                            <h3>Crea perfiles infantiles</h3>
+                            <p>Deja que los niños vivan aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, gratis con tu suscripción.</p>
+                            <img src="assets/img/icon-happy.svg" alt="Caritas sonrientes" width="72" height="72" class="position-absolute bottom-0 end-0 m-3 img-motivos  ">
+                        </div>
+                        </div>
+                    </div>  
+                </div>
+
+                <!-- Preguntas -->
+                <div class="container-fluid ">
+                    <div class="row">
+                        <h2 class="mt-5 mb-3">Preguntas frecuentes</h2>
+                    </div>
+                    <div class="accordion" id="accordionPreguntas">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header ">
+                                <button class="accordion-button bg-dark text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    ¿Qué es Netflix?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionPreguntas">
+                                <div class="accordion-body bg-dark text-white">
+                                    Netflix es un servicio de streaming que ofrece una amplia variedad de series, películas, títulos de anime, documentales y otros contenidos premiados en miles de dispositivos conectados a internet.
+                                    <br>
+                                    <br>
+                                    Puedes ver todo lo que quieras, cuando quieras, por una tarifa mensual reducida. ¡Siempre hay algo nuevo que descubrir, y cada semana se añaden nuevas series y películas!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-dark text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    ¿Cuánto cuesta Netflix?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionPreguntas">
+                                <div class="accordion-body bg-dark text-white">
+                                    Disfruta de Netflix en tu smartphone, tableta, Smart TV, ordenador o dispositivo de streaming, todo por una tarifa mensual fija. Planes desde 6,99 € a 19,99 € al mes. Sin cargos adicionales ni contratos.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    ¿Dónde puedo ver Netflix?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionPreguntas">
+                                <div class="accordion-body bg-dark text-white">
+                                    Disfruta donde quieras y cuando quieras. Inicia sesión con tu cuenta de Netflix para disfrutar al instante de todo el contenido de Netflix.com desde tu ordenador personal o en cualquier dispositivo conectado a internet que ofrezca la aplicación de Netflix, entre ellos, smart TV, smartphones, tabletas, reproductores multimedia de streaming y consolas de juegos.
+                                    <br>
+                                    <br>
+                                    También puedes descargar tus series favoritas con la aplicación de iOS o Android. Usa las descargas para ver títulos dondequiera que vayas y cuando no dispongas de conexión a internet. Netflix siempre te acompaña.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    ¿Cómo cancelo?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionPreguntas">
+                                <div class="accordion-body bg-dark text-white">
+                                    Netflix es flexible. Sin contratos liosos ni compromisos. Puedes cancelar fácilmente tu cuenta en línea con tan solo dos clics. Sin cargos por cancelación: activa o cancela tu cuenta en cualquier momento.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    ¿Qué puedo ver en Netflix?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionPreguntas">
+                                <div class="accordion-body bg-dark text-white">
+                                    Netflix dispone de una amplia biblioteca de originales de Netflix galardonados, títulos de anime, series de TV, documentales, largometrajes y otros contenidos. Ve todo el contenido que quieras, cuando quieras.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                                    ¿Es Netflix bueno para los niños?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionPreguntas">
+                                <div class="accordion-body bg-dark text-white">
+                                    La experiencia infantil de Netflix se incluye en la suscripción para que los padres tengan el control mientras los niños disfrutan de series y películas familiares en su propio espacio.
+                                    <br>
+                                    <br>
+                                    Los perfiles infantiles incluyen controles parentales protegidos por PIN que te permiten restringir la calificación por edades del contenido que pueden ver los niños y bloquear determinados títulos que no quieras que vean.
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                <!-- suscripcion -->
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="row ">
+                        <p class="mt-5">¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla.</p>
+                    </div>
+                   <div class="row">
+                    <form class="mt-3 d-flex flex-column flex-md-row align-items-center">
+                        <input type="email" class="form-control mb-2 mb-md-0 email-input bg-transparent text-white" id="email-input" placeholder="Dirección de correo" required>
+                        <button class="btn btn-danger btn-submit" id="btn-submit">Empezar ></button>
+                    </form>
+                   </div>
+                   
+                </div>
+            </main>
+        
+        <!-- foter -->
+        <footer>
+            <div>
+                <p class="mt-5" style="color:#8a8a8a">¿Preguntas? Llama al <a href="#">900-759-106</a></p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Inversores</a></li>
+                        <li><a href="#">Formas de ver</a></li>
+                        <li><a href="#">Información corporativa</a></li>
+                        <li><a href="#">Avisos legales</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <ul>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Empleo</a></li>
+                        <li><a href="#">Terminos de uso</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                        <li><a href="#">Solo en Netflix</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <ul>
+                        <li><a href="#">Cuenta</a></li>
+                        <li><a href="#">Canjear tarjetas regalo</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Prueba de velocidad</a></li>
+                        <li><a href="#">Opciones de anuncios</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <ul>
+                        <li><a href="#">Zona de prensa</a></li>
+                        <li><a href="#">Comprar tarjetas regalo</a></li>
+                        <li><a href="#">Preferencias de cookies</a></li>
+                        <li><a href="#">Garantía legal</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row mt-5">
+                <select name="select" class="bg-transparent text-white me-2 language-footer p-1" >
+                    <option value="Español" class="text-dark selected">Español</option>
+                    <option value="Inglés" class="text-dark">English</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <p class="mt-5 mb-5" style="color:#8a8a8a">Netflix España</p>
+            </div>
+        </footer>
+    </div>
+    
+
+
+    <!-- SCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
