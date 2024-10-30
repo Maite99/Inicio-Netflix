@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Netflix Sans Bold';
-    src: url('../fonts/NetflixSans-Bold.woff2') format('woff2'),
+    src: url('../fonts/NetflixSans-Bold.otf') format('otf');
 }
 
 .btn-danger{
